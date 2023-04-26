@@ -1,0 +1,50 @@
+@use "../utils" as u;
+@import "./colors";
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 2;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--clr-font);
+  transition: all 0.8s ease;
+}
+
+.container {
+  max-width: u.rem(868);
+  margin: 0 auto;
+  padding: 0 clamp(u.rem(20), 10vw, u.rem(91));
+}
+
+h1 {
+  font-size: clamp(u.rem(46), 10vw, u.rem(92));
+  font-weight: normal;
+  color: var(--clr-font);
+}
+
+p {
+  font-size: clamp(u.rem(12), 3vw, u.rem(20));
+  color: var(--clr-font);
+}
+
+a {
+  font-size: clamp(u.rem(10), 2vw, u.rem(15));
+  text-decoration: none;
+  display: flex;
+
+  line-height: clamp(13.7px, 2.5vw, 10.6px);
+
+  color: var(--clr-font);
+}
+
+button {
+  color: var(--clr-font);
+}

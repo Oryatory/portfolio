@@ -1,0 +1,42 @@
+@use "../utils" as u;
+
+.contacts {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: u.rem(40);
+  }
+
+  &__header {
+    max-width: 60%;
+    font-size: clamp(u.rem(28), 7vw, u.rem(70));
+  }
+
+  &__contacts {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    p {
+      max-width: u.rem(200);
+      margin-bottom: clamp(u.rem(8), 2vw, u.rem(20));
+
+      @media (max-width: 634px) {
+        margin-left: auto;
+        max-width: 50%;
+      }
+    }
+
+    a {
+      font-size: clamp(u.rem(10), 2vw, u.rem(16));
+      padding-bottom: 0;
+      display: block;
+      width: fit-content;
+      margin-left: auto;
+      display: flex;
+      line-height: clamp(u.rem(8), 2vw, u.rem(12));
+    }
+  }
+}

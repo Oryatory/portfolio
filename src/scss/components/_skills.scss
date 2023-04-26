@@ -1,0 +1,41 @@
+@use "../utils" as u;
+
+.skills {
+  margin-bottom: u.rem(40);
+  &__wrapper {
+    text-align: right;
+
+    p {
+      margin-top: u.rem(32);
+    }
+  }
+  &__icons {
+    // max-width: u.rem(428);
+    margin-left: auto;
+    margin-top: u.rem(36);
+    display: flex;
+    justify-content: space-around;
+    // flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__icon {
+    filter: grayscale(100%);
+    transition: all 0.2s ease-in-out;
+    width: 4vw;
+    @media (max-width: 998px) {
+      width: 5.5vw;
+    }
+    flex-shrink: 1;
+  }
+
+  &__star {
+    font-weight: 400;
+    font-size: clamp(u.rem(8), 3vw, u.rem(24));
+    opacity: 50%;
+  }
+
+  &__icon:hover {
+    filter: none;
+  }
+}

@@ -1,0 +1,58 @@
+@use "../utils" as u;
+@import "../globals/colors";
+
+.header {
+  padding-top: u.rem(30);
+  margin-bottom: u.rem(72);
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__list {
+    max-width: clamp(u.rem(192), 40vw, u.rem(320));
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+}
+
+.list__item {
+  display: inline-block;
+}
+
+.theme-btn {
+  width: clamp(u.rem(20), 6vw, u.rem(27));
+  height: clamp(u.rem(12), 3vw, u.rem(14));
+  border: 2px solid var(--clr-font);
+  border-radius: 32px;
+  background-color: var(--clr-primary);
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+
+  &__circle {
+    position: absolute;
+    width: clamp(u.rem(8), 2vw, u.rem(10));
+    height: clamp(u.rem(8), 2vw, u.rem(10));
+    border-radius: 50%;
+    background-color: var(--clr-font);
+    top: 50%;
+    right: 1px;
+    transform: translate(0%, -50%);
+    border: 0.5px solid var(--clr-primary);
+    transition: all 0.5s ease;
+  }
+}
+
+.shift-left {
+  transform: translate(-110%, -50%);
+}
+
+.shift-right {
+  transform: translate(0%, -50%);
+}
