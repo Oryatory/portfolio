@@ -30,8 +30,8 @@ export const works = [
       "That's a pet project, that was build for searching movies from OMDBApi. Basic design, but usefull functionality.",
     id: nanoid(),
     type: "Movie search",
-    pageLink: "",
-    codeLink: "",
+    pageLink: "https://main--movies-dbpet.netlify.app/",
+    codeLink: "https://github.com/Oryatory/MoviesDB",
   },
 
   {
