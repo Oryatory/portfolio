@@ -1,7 +1,11 @@
 @font-face {
   font-family: Steinbeck;
-  src: url("../assets/fonts/SteinbeckRegular.otf") format("opentype");
-  font-stretch: normal;
+  src: url("../assets/fonts/SteinbeckRegular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
 }
 
 body {
