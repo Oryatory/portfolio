@@ -16,7 +16,6 @@ const SingleProject = ({
 }) => {
   const [animate, setAnimate] = useState(false);
   const isActive = id === activeId;
-
   useEffect(() => {
     isActive ? setAnimate(true) : setAnimate(false);
   }, [activeId]);
@@ -25,15 +24,25 @@ const SingleProject = ({
     return Math.min(Math.max(min, value), max);
   };
 
+  console.log(animate);
+
   return (
     <motion.div className="work">
       <div className="button-container">
         <motion.button
           className="work__button"
-          onClick={() => toggleWork(id)}
-          onTapEnd={() => setAnimate(!animate)}
-          onHoverStart={() => setAnimate(true)}
-          onHoverEnd={() => (!isActive ? setAnimate(false) : setAnimate(true))}
+          onClick={() => {
+            toggleWork(id);
+          }}
+          whileTap={() => {
+            isActive && setAnimate(true);
+          }}
+          onHoverStart={() => {
+            setAnimate(true);
+          }}
+          onHoverEnd={() => {
+            !isActive && setAnimate(false);
+          }}
           animate={{
             x: animate ? -clamp(73, width / 5, 100) : 0,
             opacity: activeId && !isActive ? 0.5 : 1,
