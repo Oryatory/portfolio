@@ -112,7 +112,7 @@ const SingleProject = ({
       </div>
 
       <motion.div
-        style={{ overflow: "hidden" }}
+        style={{ overflow: "hidden", marginBottom: "5px" }}
         initial={{ height: 0 }}
         animate={{ height: isActive ? "auto" : 0 }}
         transition={{ duration: 0.5 }}

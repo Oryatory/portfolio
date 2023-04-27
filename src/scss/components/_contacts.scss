@@ -31,12 +31,11 @@
 
     a {
       font-size: clamp(u.rem(10), 2vw, u.rem(16));
-      padding-bottom: 0;
-      display: block;
-      width: fit-content;
       margin-left: auto;
       display: flex;
-      line-height: clamp(u.rem(8), 2vw, u.rem(12));
+      align-items: center;
+      justify-content: flex-end;
+      text-align: right;
     }
   }
 }

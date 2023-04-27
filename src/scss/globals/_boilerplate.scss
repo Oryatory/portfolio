@@ -9,6 +9,7 @@
   padding: 0;
   position: relative;
   z-index: 2;
+  line-height: 1;
 }
 
 body {
@@ -39,9 +40,7 @@ a {
   font-size: clamp(u.rem(10), 2vw, u.rem(15));
   text-decoration: none;
   display: flex;
-
-  line-height: clamp(13.7px, 2.5vw, 10.6px);
-
+  align-items: center;
   color: var(--clr-font);
 }
 
