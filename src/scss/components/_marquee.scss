@@ -10,6 +10,9 @@
   // padding-bottom: u.rem(2);
 }
 
+.marquee-container {
+  overflow-y: hidden !important;
+}
 .marquee-span {
   font-size: clamp(u.rem(32), 12vw, u.rem(82));
   transform: rotate(-5deg);

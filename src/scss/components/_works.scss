@@ -51,7 +51,7 @@
 .work__info {
   position: absolute;
   right: 0;
-  bottom: u.rem(12);
+  bottom: clamp(u.rem(2), 1.5vw, u.rem(12));
   max-width: clamp(u.rem(70), 24vw, u.rem(100));
 
   p {
