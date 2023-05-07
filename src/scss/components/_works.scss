@@ -63,12 +63,12 @@
   display: flex;
   align-items: center;
   height: clamp(u.rem(40), 10vw, u.rem(84));
-  // color: #808080;
 }
 
 .technologies-container {
   display: flex;
-  max-width: u.rem(100);
+  gap: 10px;
+  justify-content: flex-end;
   justify-content: space-between;
   margin-top: clamp(u.rem(6), 2vw, u.rem(20));
   margin-left: auto;
