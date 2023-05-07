@@ -19,7 +19,7 @@ const Contacts = () => {
               </a>
 
               <a href="mailto:larin.ia28@gmail.com">
-                <TfiEmail />
+                <TfiEmail style={{ marginRight: "2px" }} />
                 larin.ia28@gmail.com
               </a>
             </div>
