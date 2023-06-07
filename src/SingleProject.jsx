@@ -5,6 +5,7 @@ const SingleProject = ({
   id,
   name,
   technologies,
+  image,
   type,
   description,
   pageLink,
@@ -23,8 +24,6 @@ const SingleProject = ({
   const clamp = (min, value, max) => {
     return Math.min(Math.max(min, value), max);
   };
-
-  console.log(animate);
 
   return (
     <motion.div className="work">
@@ -131,7 +130,13 @@ const SingleProject = ({
             return <p key={index}>{item}</p>;
           })}
         </div>
-        <p className="work__description">{description}</p>
+        <div className="work__row">
+          <div className="work__image">
+            <img src={image} alt="image" />
+          </div>
+          <p className="work__description">{description}</p>
+        </div>
+
         <div className="work__button-container">
           <a href={pageLink} target="_blank">
             <button className="links-button">Live site</button>

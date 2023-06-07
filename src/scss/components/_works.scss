@@ -29,11 +29,31 @@
   &__button {
     border: none;
     background-color: transparent;
-    font-size: clamp(u.rem(32), 10vw, u.rem(82));
+    font-size: clamp(u.rem(24), 9vw, u.rem(82));
     font-family: Steinbeck;
-    line-height: clamp(u.rem(32), 10vw, u.rem(82));
+    line-height: clamp(u.rem(24), 9vw, u.rem(82));
     cursor: pointer;
     overflow: hidden;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    margin: u.rem(15) 0;
+  }
+}
+
+.work__image {
+  width: 45%;
+  height: fit-content;
+  border: 2px solid #838383;
+  position: relative;
+
+  img {
+    border: 5px #fff solid;
+    margin: auto;
+    vertical-align: middle;
+    width: 100%;
   }
 }
 
@@ -43,8 +63,8 @@
   line-height: u.rem(20);
   height: fit-content;
   transition: all 0.3s ease-in-out;
-  margin: u.rem(15) 0;
   margin-left: auto;
+  width: 50%;
   max-width: 62vw;
 }
 

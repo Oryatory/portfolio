@@ -5,13 +5,13 @@ import js from "../src/assets/images/jsIcon.png";
 import sass from "../src/assets/images/sassIcon.png";
 import react from "../src/assets/images/reactIcon.png";
 import vite from "../src/assets/images/viteIcon.png";
-import jsx from "../src/assets/images/jsxIcon.png";
 import figma from "../src/assets/images/figmaIcon.png";
 import ps from "../src/assets/images/psIcon.png";
 import ts from "../src/assets/images/typescripticon.png";
+import redux from "../src/assets/images/reduxIcon.png";
 import { Fragment } from "react";
 
-const images = [html, css, js, sass, react, vite, ts, figma, ps];
+const images = [html, css, js, react, redux, ts, vite, sass, figma, ps];
 
 const Skills = () => {
   return (
