@@ -37,20 +37,21 @@
 
   &__circle {
     position: absolute;
-    width: clamp(u.rem(8), 2vw, u.rem(10));
-    height: clamp(u.rem(8), 2vw, u.rem(10));
+    width: clamp(u.rem(6), 2vw, u.rem(9));
+    height: clamp(u.rem(6), 2vw, u.rem(9));
     border-radius: 50%;
     background-color: var(--clr-font);
     top: 50%;
     right: 1px;
     transform: translate(0%, -50%);
-    border: 0.5px solid var(--clr-primary);
+    // border: 0.5px solid var(--clr-primary);
     transition: all 0.5s ease;
   }
 }
 
 .shift-left {
-  transform: translate(-110%, -50%);
+  // transform: translate(-100%, -50%);
+  right: 53%;
 }
 
 .shift-right {

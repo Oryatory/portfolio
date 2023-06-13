@@ -27,7 +27,7 @@ const SingleProject = ({
 
   return (
     <motion.div className="work">
-      <div className="button-container">
+      <div className="work__button-container">
         <motion.button
           className="work__button"
           onClick={() => {
@@ -134,16 +134,17 @@ const SingleProject = ({
           <div className="work__image">
             <img src={image} alt="image" />
           </div>
-          <p className="work__description">{description}</p>
-        </div>
-
-        <div className="work__button-container">
-          <a href={pageLink} target="_blank">
-            <button className="links-button">Live site</button>
-          </a>
-          <a href={codeLink} target="_blank">
-            <button className="links-button">Source code</button>
-          </a>
+          <div className="work__col">
+            <p className="work__description">{description}</p>
+            <div className="work__links-container">
+              <a className="work__link" href={pageLink} target="_blank">
+                <button className="work__links-button">Live site</button>
+              </a>
+              <a className="work__link" href={codeLink} target="_blank">
+                <button className="work__links-button">Source code</button>
+              </a>
+            </div>
+          </div>
         </div>
       </motion.div>
     </motion.div>

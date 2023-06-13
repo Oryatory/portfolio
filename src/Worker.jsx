@@ -7,7 +7,7 @@ const Worker = ({ theme }) => {
         alt="worker"
         style={{
           width: "100%",
-          filter: theme === "light-theme" ? "none" : "invert(100%)",
+          filter: theme === "light-theme" ? "none" : "contrast(0.8)",
         }}
       />
     </div>
