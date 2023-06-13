@@ -1,7 +1,7 @@
 @import "../globals/colors";
 
-.background {
-  background: url(../assets/images/light-background.png);
+.background__image {
+  background-image: url(../assets/images/light-background.png);
   background-size: auto;
   background-position: center;
   height: 100vh;
@@ -10,9 +10,17 @@
   opacity: 33%;
   overflow: hidden;
   z-index: 1 !important;
-  transition: all 0.8s ease;
+  transition: filter 0.8s ease;
 }
 
-.background-container {
-  // mix-blend-mode: color-dodge;
+.background__noise {
+  background-image: url(../assets/images/402107790_STATIC_NOISE_400.gif);
+  background-size: auto;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  opacity: 8%;
+  overflow: hidden;
+  z-index: 1 !important;
 }
