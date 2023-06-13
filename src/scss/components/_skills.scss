@@ -6,16 +6,14 @@
     text-align: right;
 
     p {
-      margin-top: u.rem(32);
+      margin-top: clamp(0.875rem, 4vw, 1.75rem);
     }
   }
   &__icons {
-    // max-width: u.rem(428);
     margin-left: auto;
-    margin-top: u.rem(36);
+    margin-top: clamp(0.875rem, 4vw, 1.75rem);
     display: flex;
-    justify-content: space-around;
-    // flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
   }
 
