@@ -63,21 +63,26 @@
   width: 45%;
   height: fit-content;
   position: relative;
+  display: inline-block;
+  overflow: hidden;
+  top: -28px;
 
-  @media (max-width: 768px) {
-    width: 60vw;
-    margin: auto;
-  }
-  @media (max-width: 488px) {
+  @media (max-width: 769px) {
     width: 100%;
+    top: auto;
   }
 
   img {
-    // border: 5px #fff solid;
-    margin: auto;
-    vertical-align: middle;
-    width: 100%;
-    // clip-path: url(#work);
+    display: block;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    clip-path: url(#work__image__wrapper);
+    -webkit-clip-path: url(#work__image__wrapper);
+    z-index: 2;
+    @media (max-width: 769px) {
+      margin: auto;
+    }
   }
 }
 

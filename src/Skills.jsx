@@ -26,23 +26,18 @@ const Skills = () => {
             {images.map((image, index) => {
               return (
                 <Fragment key={index}>
-                  {/* <svg
+                  <svg
                     id="sw-js-blob-svg"
-                    viewBox="0 0 100 100"
+                    viewBox="0 0 1 1"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <clipPath id="work">
-                      <path
-                        d="M14.3,-14.1C19.5,-12.7,25.4,-9.1,30,-2.4C34.7,4.4,38.3,14.2,34.7,19.8C31.2,25.3,20.6,26.4,13,24.1C5.4,21.8,0.9,16,-7.9,15.5C-16.6,15,-29.5,19.7,-35.8,16.8C-42.1,13.9,-41.8,3.3,-38.2,-4.9C-34.6,-13.1,-27.7,-18.9,-20.8,-20.1C-13.8,-21.2,-6.9,-17.6,-1.2,-16.2C4.6,-14.8,9.1,-15.5,14.3,-14.1Z"
-                        style={{
-                          transform: "translate(190%, 60%) scale(300%)",
-                          // width: "10vw",
-                          // objectFit: "cover",
-                        }}
-                        // stroke="url(#sw-gradient)"
-                      ></path>
+                    <clipPath
+                      id="work__image__wrapper"
+                      clipPathUnits="objectBoundingBox"
+                    >
+                      <path d="M.486.043C.582.007.719.063.753.191.915.197 1.033.401.981.683.887.93.788.793.536.837.355.853.3.922.204.773.077.784.031.666.017.535.035.247.05.136.182.046.313-.017.371.101.484.04Z"></path>
                     </clipPath>
-                  </svg> */}
+                  </svg>
                   <img src={image} alt="css" className="skills__icon" />
                 </Fragment>
               );
