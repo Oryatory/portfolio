@@ -10,6 +10,17 @@ export const links = ["about", "skills", "works", "contacts"];
 
 export const works = [
   {
+    name: "LEGACY",
+    technologies: ["js", "phaser.js"],
+    description:
+      "IN DEVELOPMENT! That's a game i'm building myself using assets from https://itch.io/ Forest Sprites by Anokolisa. I'm learning how to use phaser, some physics stuff, OOP programming and just having fun creating this game! I'm planning to expand my knwoledge and expand the game with it to something big!  ",
+    id: nanoid(),
+    image: fitLine,
+    type: "Landing page",
+    pageLink: "https://legacy-phantasy-game.netlify.app/",
+    codeLink: "https://github.com/Oryatory/LegacyPhantasyGame",
+  },
+  {
     name: "COMFYSHOP",
     technologies: ["react", "css"],
     description:
