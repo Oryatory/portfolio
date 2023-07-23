@@ -5,6 +5,7 @@ import jobster from "../src/assets/images/jobster.png";
 import gitHubRepo from "../src/assets/images/gitHubRepo.png";
 import postsApp from "../src/assets/images/postsApp.png";
 import fitLine from "../src/assets/images/fitLine.png";
+import legacyGame from "../src/assets/images/legacyGame.png";
 
 export const links = ["about", "skills", "works", "contacts"];
 
@@ -15,8 +16,8 @@ export const works = [
     description:
       "IN DEVELOPMENT! That's a game i'm building myself using assets from https://itch.io/ Forest Sprites by Anokolisa. I'm learning how to use phaser, some physics stuff, OOP programming and just having fun creating this game! I'm planning to expand my knwoledge and expand the game with it to something big!  ",
     id: nanoid(),
-    image: fitLine,
-    type: "Landing page",
+    image: legacyGame,
+    type: "Phaser game",
     pageLink: "https://legacy-phantasy-game.netlify.app/",
     codeLink: "https://github.com/Oryatory/LegacyPhantasyGame",
   },
