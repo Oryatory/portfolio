@@ -109,6 +109,8 @@
 .work__button-container {
   display: flex;
   align-items: center;
+  cursor: pointer;
+  background-color: transparent;
   height: clamp(u.rem(40), 10vw, u.rem(84));
 }
 

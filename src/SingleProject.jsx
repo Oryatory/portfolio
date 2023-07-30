@@ -27,21 +27,25 @@ const SingleProject = ({
 
   return (
     <motion.div className="work">
-      <div className="work__button-container">
+      <div
+        className="work__button-container"
+        onClick={() => {
+          toggleWork(id);
+        }}
+        onMouseEnter={() => setAnimate(true)}
+        onMouseLeave={() => !isActive && setAnimate(false)}
+      >
         <motion.button
           className="work__button"
-          onClick={() => {
-            toggleWork(id);
-          }}
-          whileTap={() => {
-            isActive && setAnimate(true);
-          }}
-          onHoverStart={() => {
-            setAnimate(true);
-          }}
-          onHoverEnd={() => {
-            !isActive && setAnimate(false);
-          }}
+          // whileTap={() => {
+          //   isActive && setAnimate(true);
+          // }}
+          // onHoverStart={() => {
+          //   setAnimate(true);
+          // }}
+          // onHoverEnd={() => {
+          //   !isActive && setAnimate(false);
+          // }}
           animate={{
             x: animate ? -clamp(73, width / 5, 100) : 0,
             opacity: activeId && !isActive ? 0.5 : 1,
@@ -132,6 +136,19 @@ const SingleProject = ({
         </div>
         <div className="work__row">
           <div className="work__image">
+            <svg
+              id="sw-js-blob-svg"
+              style={{ position: "absolute" }}
+              viewBox="0 0 1 1"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <clipPath
+                id="work__image__wrapper"
+                clipPathUnits="objectBoundingBox"
+              >
+                <path d="M.486.043C.582.007.719.063.753.191.915.197 1.033.401.981.683.887.93.788.793.536.837.355.853.3.922.204.773.077.784.031.666.017.535.035.247.05.136.182.046.313-.017.371.101.484.04Z"></path>
+              </clipPath>
+            </svg>
             <img src={image} alt="image" />
           </div>
           <div className="work__col">

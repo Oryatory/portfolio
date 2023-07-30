@@ -7,6 +7,7 @@ import Works from "./Works";
 import Worker from "./Worker";
 import Contacts from "./Contacts";
 import { useState, useEffect } from "react";
+import React from "react";
 
 const getStorageTheme = () => {
   let theme = "light-theme";
@@ -36,10 +37,16 @@ function App() {
     <>
       <Background theme={theme} />
       <Header toggleTheme={toggleTheme} getStorageTheme={getStorageTheme} />
-      <About />
-      <MarqueeComponent />
-      <Skills />
-      <Works theme={theme} />
+      <div data-barba="container" data-barba-namespace="about">
+        <About />
+        <MarqueeComponent />
+      </div>
+      <div data-barba="container" data-barba-namespace="skills">
+        <Skills />
+      </div>
+      <div data-barba="container" data-barba-namespace="works">
+        <Works theme={theme} />
+      </div>
       <Worker theme={theme} />
       <Contacts />
     </>
