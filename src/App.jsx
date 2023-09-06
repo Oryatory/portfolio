@@ -36,17 +36,19 @@ function App() {
   return (
     <>
       <Background theme={theme} />
-      <Header toggleTheme={toggleTheme} getStorageTheme={getStorageTheme} />
-      <div data-barba="container" data-barba-namespace="about">
-        <About />
-        <MarqueeComponent />
-      </div>
-      <div data-barba="container" data-barba-namespace="skills">
-        <Skills />
-      </div>
-      <div data-barba="container" data-barba-namespace="works">
-        <Works theme={theme} />
-      </div>
+      <Header
+        toggleTheme={toggleTheme}
+        getStorageTheme={getStorageTheme}
+        theme={theme}
+      />
+
+      <About />
+      <MarqueeComponent />
+
+      <Skills />
+
+      <Works theme={theme} />
+
       <Worker theme={theme} />
       <Contacts />
     </>

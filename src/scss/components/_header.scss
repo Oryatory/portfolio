@@ -2,13 +2,46 @@
 @import "../globals/colors";
 
 .header {
-  padding-top: u.rem(30);
-  margin-bottom: u.rem(72);
+  padding: u.rem(30) 0;
+
+  z-index: 10;
+
+  &--fixed {
+    position: fixed;
+    width: 100%;
+  }
+
+  // margin-bottom: u.rem(72);
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: clamp(u.rem(32), 10vw, u.rem(64));
+    max-width: u.rem(895);
+    border: none;
+    box-shadow: 0 0 0px #000000;
+    padding: 0 u.rem(24);
+    margin: 0 clamp(u.rem(-20), -10vw, u.rem(-91));
+    background-image: none;
+    z-index: 10;
+    transition: all 0.3s ease-in-out;
+
+    &--fixed {
+      border: 1px solid #a7a7a7;
+      box-shadow: 0 0 3px #a7a7a7;
+      border-radius: 9px;
+    }
+
+    &__bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      border-radius: 9px;
+      height: 100%;
+      background-image: url(../assets/images/light-background.png);
+    }
   }
 
   &__list {
@@ -16,6 +49,14 @@
     display: flex;
     justify-content: space-between;
     flex-grow: 1;
+  }
+
+  &__overlay {
+    width: 100%;
+    position: fixed;
+    top: -20%;
+    height: 200px;
+    z-index: 9;
   }
 }
 
