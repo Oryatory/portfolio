@@ -9,9 +9,7 @@ const About = () => {
   };
 
   useEffect(() => {
-    window.addEventListener("load", () => {
-      setScrollTop(0);
-    });
+    setScrollTop(0);
     window.addEventListener("scroll", setScroll);
   }, []);
 

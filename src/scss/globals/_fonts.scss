@@ -1,13 +1,9 @@
 @font-face {
   font-family: Steinbeck;
-  // font-display: swap;
   src: url("../assets/fonts/steinbeckregular-webfont.woff2") format("woff2"),
     url("../assets/fonts/steinbeckregular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
-  // -webkit-font-smoothing: antialiased;
-  // font-synthesis: none;
-  // text-rendering: optimizeLegibility;
 }
 
 body {

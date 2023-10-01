@@ -33,6 +33,17 @@ function App() {
     localStorage.setItem("theme", theme);
   }, [theme]);
 
+  useEffect(() => {
+    const loader = document.querySelector(".loader");
+    loader.style.opacity = 0;
+    loader.style.position = "absolute";
+    // loader.remove();
+
+    const root = document.getElementById("root");
+    // console.log(root);
+    root.style.opacity = 1;
+  }, []);
+
   return (
     <>
       <Background theme={theme} />

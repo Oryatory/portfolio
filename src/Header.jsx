@@ -14,9 +14,6 @@ const Header = ({ toggleTheme, getStorageTheme, theme }) => {
   };
 
   useEffect(() => {
-    window.addEventListener("load", () => {
-      setScrollTop(0);
-    });
     window.addEventListener("scroll", setScroll);
   }, []);
 
