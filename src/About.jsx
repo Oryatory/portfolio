@@ -16,7 +16,7 @@ const About = () => {
   return (
     <motion.div
       className="about"
-      animate={{
+      style={{
         paddingTop: scrollTop > 0 ? "140px" : "0px",
       }}
     >

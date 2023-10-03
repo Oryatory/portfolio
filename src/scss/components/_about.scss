@@ -1,5 +1,9 @@
 @use "../utils" as u;
 
+.about {
+  transition: all 0.8s ease-in-out;
+}
+
 .about-wrapper {
   h1 {
     max-width: u.rem(318);

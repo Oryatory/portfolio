@@ -46,7 +46,7 @@ function App() {
 
   return (
     <>
-      <Background theme={theme} />
+      <Background theme={theme} position={"fixed"} />
       <Header
         toggleTheme={toggleTheme}
         getStorageTheme={getStorageTheme}

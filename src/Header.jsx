@@ -4,6 +4,7 @@ import { Link, animateScroll as scroll } from "react-scroll";
 import ThemeBtn from "./ThemeBtn";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import Background from "./Background";
 
 const Header = ({ toggleTheme, getStorageTheme, theme }) => {
   const [scrollTop, setScrollTop] = useState(0);
@@ -25,48 +26,59 @@ const Header = ({ toggleTheme, getStorageTheme, theme }) => {
         onMouseEnter={() => scrollTop > 0 && setShowNav(true)}
         onMouseLeave={() => scrollTop > 0 && setShowNav(false)}
       >
-        <div className="container" style={{ zIndex: 10 }}>
-          <div
-            className={`${
-              scrollTop > 0
-                ? "header__wrapper header__wrapper--fixed"
-                : "header__wrapper"
-            }`}
-          >
-            <div
-              className="header__wrapper__bg"
-              style={{
-                display: scrollTop > 0 ? "block" : "none",
-                filter: theme === "light-theme" ? "none" : "invert(100%)",
-              }}
-            ></div>
-            <ThemeBtn
-              toggleTheme={toggleTheme}
-              getStorageTheme={getStorageTheme}
+        <div
+          className={`header__container ${
+            scrollTop > 0 ? "header__container--fixed" : ""
+          }`}
+          style={{
+            backgroundColor:
+              scrollTop > 0 ? "rgba(255,255,255,1)" : "rgba(255,255,255,0)",
+          }}
+        >
+          {scrollTop > 0 && (
+            <Background
+              theme={theme}
+              position="absolute"
+              // style={{ zIndex: 11 }}
             />
-            <ul className="header__list">
-              {links.map((link, index) => {
-                return (
-                  <li className="list__item" key={index}>
-                    {/* <TbArrowRight
+          )}
+
+          <div className="container" style={{ zIndex: 10 }}>
+            <div
+              className={`${
+                scrollTop > 0
+                  ? "header__wrapper header__wrapper--fixed"
+                  : "header__wrapper"
+              }`}
+            >
+              <ThemeBtn
+                toggleTheme={toggleTheme}
+                getStorageTheme={getStorageTheme}
+              />
+              <ul className="header__list">
+                {links.map((link, index) => {
+                  return (
+                    <li className="list__item" key={index}>
+                      {/* <TbArrowRight
                     style={{ fontWeight: "700", fontSize: "1rem" }}
                   /> */}
-                    <Link
-                      to={link}
-                      spy={true}
-                      smooth={true}
-                      duration={index * 400}
-                      style={{ cursor: "pointer" }}
-                    >
-                      <TbArrowRight
-                        style={{ fontWeight: "700", fontSize: "1rem" }}
-                      />
-                      {link}
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
+                      <Link
+                        to={link}
+                        spy={true}
+                        smooth={true}
+                        duration={index * 400}
+                        style={{ cursor: "pointer" }}
+                      >
+                        <TbArrowRight
+                          style={{ fontWeight: "700", fontSize: "1rem" }}
+                        />
+                        {link}
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
           </div>
         </div>
 
